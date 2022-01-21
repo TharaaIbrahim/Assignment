@@ -10,6 +10,8 @@ const asideIcons = document.querySelectorAll(".main__aside__nav__list__icons");
 const asideContent = document.querySelector(".main__aside__content");
 const asideList = document.querySelector(".main__aside__nav__list");
 const backNav = document.querySelector(".main__aside__nav__back");
+const mainArticle = document.querySelector(".main__article");
+const mainNav = document.querySelector(".nav-Container");
 
 function aside_Content(content) {
   if (window.getComputedStyle(asideContent).display == "none") {
@@ -17,6 +19,8 @@ function aside_Content(content) {
     asideList.classList.toggle("hide-List");
     asideContent.classList.toggle("show-Content");
     backNav.classList.toggle("show-Back");
+    mainNav.classList.toggle("hide-Article");
+    mainArticle.classList.toggle("hide-Article");
 
     // backNav.style.display = "block";
     // asideList.style.display = "none";
@@ -73,6 +77,8 @@ function aside_Content(content) {
       asideList.classList.toggle("hide-List");
       asideContent.classList.toggle("show-Content");
       backNav.classList.toggle("show-Back");
+      mainNav.classList.toggle("hide-Article");
+      mainArticle.classList.toggle("hide-Article");
   }
 }
 
