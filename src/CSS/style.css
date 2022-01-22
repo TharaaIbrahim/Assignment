@@ -9,6 +9,9 @@
   --gray-Color: rgba(59, 58, 58, 0.911);
   --aside-Bgcolor: #f3f3f3;
 }
+a {
+  color: blue;
+}
 li {
   list-style: none;
 }
@@ -143,8 +146,7 @@ body {
   border-bottom: 1px solid var(--gray-Color);
   color: var(--gray-Color);
 }
-.related a,
-.details a {
+.main__aside__content__section a {
   color: var(--primary-Color);
 }
 .details,
