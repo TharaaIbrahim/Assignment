@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Online Article Page" />
+    <meta name="keywords" content="article,abstract, inroduction" />
+    <meta name="author" content="Author 1, Author 2,Author 3" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -11,12 +14,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
     <title>Article</title>
   </head>
   <body>
-    <nav class="nav-Container">
-      <label class="nav-Container__logo">LOGO</label>
+    <nav class="nav-Container" role="navigation" aria-label="main navigation">
+      <a href="./index.html" class="nav-Container__logo"><label>LOGO</label></a>
     </nav>
     <main class="main">
       <article class="main__article">
@@ -107,40 +110,44 @@
         </section>
       </article>
       <aside class="main__aside">
-        <nav class="main__aside__nav">
-          <label onclick="aside_Content('none')" class="main__aside__nav__back">
+        <nav
+          class="main__aside__nav"
+          role="navigation"
+          aria-label="aside navigation"
+        >
+          <button onclick="asideSmall_toggle()" class="main__aside__nav__back">
             <i class="fas fa-chevron-left"></i>Back
-          </label>
-          <ul class="main__aside__nav__list">
-            <li
+          </button>
+          <div class="main__aside__nav__list">
+            <button
               class="main__aside__nav__list__icons fig-Icon"
               onclick="aside_Content('figures')"
             >
               <img src="../Assets/figures.svg" alt="figures" />
               <figcaption>Figures</figcaption>
-            </li>
-            <li
+            </button>
+            <button
               class="main__aside__nav__list__icons ref-Icon"
               onclick="aside_Content('references')"
             >
               <img src="../Assets/references.svg" alt="references" />
               <figcaption>References</figcaption>
-            </li>
-            <li
+            </button>
+            <button
               class="main__aside__nav__list__icons rel-Icon"
               onclick="aside_Content('related')"
             >
               <img src="../Assets/related.svg" alt="related" />
               <figcaption>Related</figcaption>
-            </li>
-            <li
+            </button>
+            <button
               class="main__aside__nav__list__icons det-Icon"
               onclick="aside_Content('details')"
             >
               <img src="../Assets/info.svg" alt="details" />
               <figcaption>Details</figcaption>
-            </li>
-          </ul>
+            </button>
+          </div>
         </nav>
         <div class="main__aside__content">
           <section class="main__aside__content__section figures">
@@ -231,8 +238,12 @@
             </div>
 
             <div>
-              <h3>Title</h3>
+              <h3>Competing Interests</h3>
               <ul>
+                <li><a href="#">Nam tenetur accusamus </a></li>
+                <li><a href="#">Voluptatibus maxime quis </a></li>
+                <li><a href="#">Rem suscipit velit </a></li>
+                <li><a href="#">Saepe rem suscipit </a></li>
                 <li><a href="#">Nam tenetur accusamus </a></li>
                 <li><a href="#">Voluptatibus maxime quis </a></li>
                 <li><a href="#">Rem suscipit velit </a></li>
@@ -275,6 +286,6 @@
         </div>
       </aside>
     </main>
-    <script src="./index.js"></script>
+    <script src="./JS/index.js"></script>
   </body>
 </html>
